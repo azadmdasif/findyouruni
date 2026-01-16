@@ -39,6 +39,21 @@
         }
       }
     </script>
+    <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof url !== 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+      'send_to': 'AW-17878160258/6Y5-COXlz-YbEIKn_MxC',
+      'event_callback': callback
+    });
+    return false;
+  }
+</script>
+
     <style>
       body {
         background-color: #F9F8F6;
