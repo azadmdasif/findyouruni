@@ -10,22 +10,25 @@ const Hero: React.FC = () => (
     <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
       <div className="max-w-3xl">
         <span className="inline-block px-4 py-1.5 bg-gold/10 text-gold text-xs font-bold tracking-[0.2em] mb-8 border border-gold/20">
-          NEUTRAL & COMMISSION-FREE
+          Free Admission Assistance
         </span>
         <h1 className="text-5xl md:text-7xl font-serif text-navy leading-[1.1] mb-8">
-          Strategic guidance for your <span className="italic text-gold">global academic</span> journey.
+          Book a free consultation for your <span className="italic text-gold">study abroad</span> journey.
         </h1>
         <p className="text-lg md:text-xl text-navy/70 leading-relaxed mb-10 max-w-2xl">
           We do not accept commissions from universities. This independence allows us to prioritize your goals, your profile, and your future above all else.
         </p>
         <div className="flex flex-col sm:flex-row gap-5">
           <Link to="/contact" className="px-10 py-5 bg-navy text-white text-sm font-bold tracking-widest hover:bg-gold transition-all duration-300 shadow-xl shadow-navy/10 flex items-center justify-center gap-3 group">
-            BOOK A DISCOVERY CALL <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            BOOK FREE CALL <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link to="/about" className="px-10 py-5 border border-navy/20 text-navy text-sm font-bold tracking-widest hover:bg-navy/5 transition-all duration-300 flex items-center justify-center">
             OUR PHILOSOPHY
           </Link>
         </div>
+         <p className="text-sm text-navy/50 mt-4">
+          Free · No pressure · No obligation
+        </p>
       </div>
     </div>
     
