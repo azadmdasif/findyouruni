@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, MessageCircle } from 'lucide-react';
 import { CONTACT_INFO } from '../constants';
 
 const Contact: React.FC = () => {
@@ -32,6 +32,34 @@ const Contact: React.FC = () => {
 
                   </div>
                 </div>
+                <div className="flex items-start gap-6">
+  <div className="w-12 h-12 bg-green-600 text-white flex items-center justify-center rounded-sm flex-shrink-0">
+    <MessageCircle size={20} />
+  </div>
+
+  <a
+    href="https://wa.me/919311449441"
+    onClick={(e) => {
+      e.preventDefault();
+      if (window.gtag_report_conversion) {
+        window.gtag_report_conversion(
+          "https://wa.me/919311449441"
+        );
+      }
+    }}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block group"
+  >
+    <h4 className="text-sm font-bold tracking-widest text-navy uppercase mb-1 group-hover:text-green-600 transition-colors">
+      WhatsApp Chat
+    </h4>
+    <p className="text-navy/60 font-medium group-hover:text-navy transition-colors">
+      Chat with an advisor on WhatsApp
+    </p>
+  </a>
+</div>
+
                 <div className="flex items-start gap-6">
                   <div className="w-12 h-12 bg-navy text-gold flex items-center justify-center rounded-sm flex-shrink-0">
                     <Mail size={20} />
