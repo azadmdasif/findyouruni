@@ -10,8 +10,8 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
+    { name: 'Pricing', path: '/pricing' },
     { name: 'Destinations', path: '/destinations' },
     { name: 'Process', path: '/process' },
     { name: 'Scholarships', path: '/scholarships' },
@@ -29,21 +29,21 @@ const Navbar: React.FC = () => {
             <span className="font-serif text-2xl tracking-tight text-navy">FindYourUni</span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6 lg:gap-8">
             {navLinks.map((link) => (
               <Link 
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium tracking-wide hover:text-gold transition-colors duration-200 ${location.pathname === link.path ? 'text-gold' : 'text-navy/80'}`}
+                className={`text-[11px] font-bold tracking-[0.15em] hover:text-gold transition-colors duration-200 ${location.pathname === link.path ? 'text-gold' : 'text-navy/80'}`}
               >
                 {link.name.toUpperCase()}
               </Link>
             ))}
             <Link 
               to="/contact" 
-              className="bg-navy text-white px-6 py-2.5 text-sm font-medium hover:bg-gold transition-all duration-300"
+              className="bg-navy text-white px-5 py-2.5 text-[11px] font-bold tracking-[0.15em] hover:bg-gold transition-all duration-300 shadow-lg shadow-navy/10"
             >
-              FREE CONSULTATION
+              FREE CALL
             </Link>
           </div>
 
@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-parchment border-b border-navy/5 animate-in slide-in-from-top duration-300">
+        <div className="md:hidden bg-parchment border-b border-navy/5 animate-in slide-in-from-top duration-300 overflow-y-auto max-h-[90vh]">
           <div className="flex flex-col p-6 gap-4">
             {navLinks.map((link) => (
               <Link 
@@ -69,10 +69,10 @@ const Navbar: React.FC = () => {
             ))}
             <Link 
               to="/contact" 
-              className="mt-2 bg-navy text-white px-6 py-3 text-center font-medium"
+              className="mt-2 bg-navy text-white px-6 py-4 text-center font-bold tracking-widest text-xs"
               onClick={() => setIsOpen(false)}
             >
-              Book a Call
+              FREE CONSULTATION
             </Link>
           </div>
         </div>
@@ -105,24 +105,24 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="font-serif text-lg mb-6">Services</h4>
+            <h4 className="font-serif text-lg mb-6">Explore</h4>
             <ul className="space-y-3 text-sm text-white/60">
-              <li className="hover:text-gold transition-colors"><Link to="/services">University Finding</Link></li>
-              <li className="hover:text-gold transition-colors"><Link to="/services">SOP Writing</Link></li>
-              <li className="hover:text-gold transition-colors"><Link to="/services">Scholarships Identification</Link></li>
-              <li className="hover:text-gold transition-colors"><Link to="/services">CV & Academic Resume</Link></li>
-              <li className="hover:text-gold transition-colors"><Link to="/services">Research Proposals</Link></li>
+              <li className="hover:text-gold transition-colors"><Link to="/services">All Services</Link></li>
+              <li className="hover:text-gold transition-colors"><Link to="/pricing">Pricing & Packages</Link></li>
+              <li className="hover:text-gold transition-colors"><Link to="/destinations">Global Destinations</Link></li>
+              <li className="hover:text-gold transition-colors"><Link to="/scholarships">Scholarship Audit</Link></li>
+              <li className="hover:text-gold transition-colors"><Link to="/process">Our Methodology</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-serif text-lg mb-6">Destinations</h4>
+            <h4 className="font-serif text-lg mb-6">Academic Services</h4>
             <ul className="space-y-3 text-sm text-white/60">
-              <li className="hover:text-gold transition-colors"><Link to="/destinations">Study in UK</Link></li>
-              <li className="hover:text-gold transition-colors"><Link to="/destinations">Study in USA</Link></li>
-              <li className="hover:text-gold transition-colors"><Link to="/destinations">Study in Canada</Link></li>
-              <li className="hover:text-gold transition-colors"><Link to="/destinations">Study in Europe</Link></li>
-              <li className="hover:text-gold transition-colors"><Link to="/destinations">Study in Australia</Link></li>
+              <li className="hover:text-gold transition-colors"><Link to="/services">SOP Rewriting</Link></li>
+              <li className="hover:text-gold transition-colors"><Link to="/services">CV Optimization</Link></li>
+              <li className="hover:text-gold transition-colors"><Link to="/services">University Selection</Link></li>
+              <li className="hover:text-gold transition-colors"><Link to="/services">PhD Research Proposals</Link></li>
+              <li className="hover:text-gold transition-colors"><Link to="/services">Interview Coaching</Link></li>
             </ul>
           </div>
 
