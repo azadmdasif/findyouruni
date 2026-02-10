@@ -5,13 +5,13 @@ import { Layout } from './components/Layout';
 
 // Lazy load pages for performance
 const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Process = lazy(() => import('./pages/Process'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Destinations = lazy(() => import('./pages/Destinations'));
 const Scholarships = lazy(() => import('./pages/Scholarships'));
 const Blog = lazy(() => import('./pages/Blog'));
+const Pricing = lazy(() => import('./pages/Pricing'));
 
 // Simplified loading state
 const PageLoader = () => (
@@ -30,13 +30,13 @@ const App: React.FC = () => {
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/process" element={<Process />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/destinations" element={<Destinations />} />
             <Route path="/scholarships" element={<Scholarships />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/pricing" element={<Pricing />} />
           </Routes>
         </Suspense>
       </Layout>
